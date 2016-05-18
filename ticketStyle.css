@@ -1,0 +1,53 @@
+/*
+Author: Nathan Utzman
+Date Created: 4.28.2016
+
+Purpose: Creates a form which collects information for 
+a support center ticket
+
+Date Modified: 5.12.2016
+Modified By: Nathan Utzman
+*/
+
+body{
+	background-color:black;
+	margin:auto;
+}
+
+h1 { /* Creates bubble around heading */
+	text-align:center;
+	background-color:lightgrey;
+	border-color:black;
+	border-radius:10px;
+	width:600px;
+	margin:auto;
+}
+
+fieldset { /* Creates bubble around each group of inputs */
+	text-align:center;
+	background-color:lightgrey;
+	border-color:black;
+	border-radius:10px;
+	width:500px;
+	margin:auto;
+}
+
+span { /* Makes text from errors appear red */
+	color:red;
+}
+
+input[type=button] { /* Style for reset button */
+	width:25%;
+	border-radius:5px;
+	border-color:lightgrey;
+	background-color:#ff9999; /* faded red */
+}
+
+input[type=submit] { /* Style for submit button */
+	width:50%;
+	height:35px;
+	border-radius:5px;
+	border-color:lightgrey;
+	background-color:#5cd65c; /* faded green */
+	font-weight:bold;
+}
