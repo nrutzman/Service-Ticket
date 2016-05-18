@@ -1,0 +1,54 @@
+<!DOCTYPE html><html>
+	
+	<head>
+		<title>Data Center Support Operations - Submit a Ticket</title>
+	</head>
+	
+	<body style="background-color:darkblue;">
+		
+		<h1 style="text-align:center; background-color:lightgrey">Data Center Support Operations<br>Submit a Ticket</h1>
+		
+		<form action="action_page.php" method="post">
+			<fieldset style="background-color:lightgrey;">
+				<h2>Contact Information</h2>
+				Customer ID Number<br>
+				<input type="text" name="id"><br><br>
+				First Name<br>
+				<input type="text" name="firstName"><br><br>
+				Last Name<br>
+				<input type="text" name="lastName"><br><br>
+				Email Address<br>
+				<input type="email" name="email"><br><br>
+				Phone Number (Day)<br>
+				(include only numbers)<br>
+				<input type="number" name="dayPhone" size="10"><br><br>
+				Phone Number (After Business Hours)<br>
+				(include only numbers)<br>
+				<input type="number" name="eveningPhone" size="10"><br><br>
+			</fieldset>
+			
+			<br>
+			
+			<fieldset style="background-color:lightgrey;">
+				<h2>Ticket Information</h2>
+				Date Issue Started<br>
+				<input type="date" name="startDate"><br><br>
+				Brief Description of Issue<br>
+				<textarea name="description" rows="6" cols="30"></textarea><br><br>
+				IP Address or Domain Name Impacted<br>
+				<input type="text" name="ip"><br><br>
+				Criticality of Issue<br>
+				<input type="radio" name="criticality" value="high"> High<br>
+				<input type="radio" name="criticality" value="moderate"> Moderate<br>
+				<input type="radio" name="criticality" value="low" checked> Low<br>
+			</fieldset>
+			
+			<br><br>
+			
+			<input type="submit" value="Submit">
+			<br><br><br>
+			
+		</form>
+	</body>
+
+</html>
