@@ -1,0 +1,94 @@
+<!--
+Author: Nathan Utzman
+Date Created: 4.28.2016
+
+Purpose: Creates a form which collects information for 
+a support center ticket
+
+Date Modified: 5.12.2016
+Modified By: Nathan Utzman
+-->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Data Center Support Operations - Submit a Ticket</title>
+		<link rel="stylesheet" href="ticketStyle.css"> <!-- link to css stylesheet -->
+		<script src="ticketValidation.js"></script> <!-- link to JS for validation and reset functions -->
+	</head>
+	
+	<body>
+		
+		<br>
+		<h1>Data Center Support Operations<br>Submit a Ticket</h1> <br>
+		
+		<form action="processing.php" method="post" id="ticketForm"><br>
+			<fieldset>
+			
+				<h2>Contact Information</h2>
+				
+				Customer ID Number<br>
+				<input type="text" name="id" required><br><br>
+				
+				First Name<br>
+				<span id="firstNameError"></span> <!-- allows error message to be inserted -->
+				<!-- validates input on blur, checks for only letters -->
+				<input type="text" name="firstName" id="firstName" required onblur="checkFirstName()"><br><br>
+				
+				Last Name<br>
+				<span id="lastNameError"></span> <!-- allows error message to be inserted -->
+				<!-- validates input on blur, checks for only letters -->
+				<input type="text" name="lastName" id="lastName" required onblur="checkLastName()"><br><br>
+				
+				Email Address<br>
+				<span id="emailError"></span> <!-- allows error message to be inserted -->
+				<!-- validates input on blur, checks for basic email form -->
+				<input type="email" name="email" id="email" required onblur="checkEmail()"><br><br>
+				
+				Phone Number (Day)<br>
+				(no special characters)<br>
+				<span id="dayPhoneError"></span> <!-- allows error message to be inserted -->
+				<!-- validates input on blur, checks for only numbers and either 0 or 10 digits -->
+				<input type="text" name="dayPhone" id="dayPhone" size="10" onblur="checkDayPhone()"><br><br>
+				
+				Phone Number (After Business Hours)<br>
+				(no special characters)<br>
+				<span id="eveningPhoneError"></span> <!-- allows error message to be inserted -->
+				<!-- validates input on blur, checks for only numbers and either 0 or 10 digits -->
+				<input type="text" name="eveningPhone" id="eveningPhone" size="10" onblur="checkEveningPhone()"><br><br>
+				
+			</fieldset>
+			
+			<br>
+			
+			<fieldset>
+			
+				<h2>Ticket Information</h2>
+				
+				Date Issue Started<br>
+				<input type="date" name="startDate" required><br><br>
+				
+				Brief Description of Issue<br>
+				<textarea name="description" rows="6" cols="30" required></textarea><br><br>
+				
+				IP Address or Domain Name Impacted<br>
+				<input type="text" name="ip"><br><br>
+				
+				Criticality of Issue<br>
+				<input type="radio" name="criticality" value="high"> High<br>
+				<input type="radio" name="criticality" value="moderate"> Moderate<br>
+				<input type="radio" name="criticality" value="low" checked> Low<br>
+				
+				<br><br>
+				
+				<input type="button" value="Reset Form" onclick="formReset()">
+				<input type="submit" value="Submit">
+				
+			</fieldset>
+			
+			<br><br><br>
+		</form>
+	</body>
+	
+</html>

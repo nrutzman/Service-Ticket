@@ -28,7 +28,7 @@ fieldset { /* Creates bubble around each group of inputs */
 	background-color:lightgrey;
 	border-color:black;
 	border-radius:10px;
-	width:500px;
+	width:600px;
 	margin:auto;
 }
 
@@ -51,3 +51,5 @@ input[type=submit] { /* Style for submit button */
 	background-color:#5cd65c; /* faded green */
 	font-weight:bold;
 }
+
+

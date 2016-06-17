@@ -9,7 +9,6 @@ Date Modified: 5.12.2016
 Modified By: Nathan Utzman
 */
 
-
 var letters = /^[A-Z a-z \s]+$/;  //regular expression for containing only letters and spaces
 var numbers = /^[0-9]+$/;         //regular expression for containing only numbers
 var emailCheck = /^[^@]+@[^@]+$/; //regular expression for an email address
